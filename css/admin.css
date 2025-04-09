@@ -1,0 +1,36 @@
+/* Admin Dashboard Styles */
+.admin-card {
+  background-color: #f0f8ff;
+  border-left: 4px solid var(--secondary-color);
+}
+
+.admin-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.btn-admin {
+  background-color: var(--secondary-color);
+  color: white;
+  width: 100%;
+}
+
+.btn-admin:hover {
+  background-color: #009088;
+}
+
+.admin-controls {
+  grid-column: 1 / -1;
+}
+
+.admin-badge {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-left: var(--spacing-sm);
+}

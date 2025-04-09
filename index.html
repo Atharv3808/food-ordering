@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodHub - Order Food Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container"> 
+            <div class="header-content">
+                <div class="logo">
+                    <h1>FoodHub</h1>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="restaurant.html" class="nav-link">Restaurants</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Offers</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn btn-login">Login</button>
+                    <div class="cart-icon" id="cart-icon">
+                        <span class="cart-count">0</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                    </div>
+                    <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Order Delicious Food Online</h2>
+                    <p>Discover the best food from over 1,000 restaurants</p>
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Search for food or restaurants...">
+                        <button class="btn btn-search">Search</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <h2 class="section-title">Food Categories</h2>
+                <div class="categories-container">
+                    <div class="category-card" data-category="pizza">
+                        <div class="category-img">
+                            <img src="image.png" alt="Pizza">
+                        </div>
+                        <h3>Pizza</h3>
+                    </div>
+                    <div class="category-card" data-category="burger">
+                        <div class="category-img">
+                            <img src="image copy.png" alt="Burger">
+                        </div>
+                        <h3>Burger</h3>
+                    </div>
+                    <div class="category-card" data-category="sushi">
+                        <div class="category-img">
+                            <img src="image copy 2.png" alt="Sushi">
+                        </div>
+                        <h3>Thali</h3>
+                    </div>
+                    <div class="category-card" data-category="pasta">
+                        <div class="category-img">
+                            <img src="image copy 3.png" alt="Pasta">
+                        </div>
+                        <h3>Chicken</h3>
+                    </div>
+                    <div class="category-card" data-category="dessert">
+                        <div class="category-img">
+                            <img src="https://via.placeholder.com/150" alt="Dessert">
+                        </div>
+                        <h3>Dessert</h3>
+                    </div>
+                    <div class="category-card" data-category="drinks">
+                        <div class="category-img">
+                            <img src="https://via.placeholder.com/150" alt="Drinks">
+                        </div>
+                        <h3>Drinks</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="restaurants">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Popular Restaurants</h2>
+                    <div class="filter-options">
+                        <select id="sort-by">
+                            <option value="rating">Rating</option>
+                            <option value="delivery-time">Delivery Time</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="restaurants-container" id="restaurants-container">
+                    <!-- Restaurants will be loaded here via JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>FoodHub</h2>
+                    <p>Delicious food delivered to your doorstep</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="#">Help & Support</a></li>
+                            <li><a href="#">Partner with us</a></li>
+                            <li><a href="#">Ride with us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Refund Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 FoodHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Login -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+        </div>
+    </div>
+
+    <!-- Modal for Signup -->
+    <div class="modal" id="signup-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Account</button>
+            </form>
+            <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+        </div>
+    </div>
+
+    <!-- Modal for Cart -->
+    <div class="modal" id="cart-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be loaded here via JavaScript -->
+            </div>
+            <div class="cart-total">
+                <p>Subtotal: <span id="cart-subtotal">$0.00</span></p>
+                <p>Delivery Fee: <span id="delivery-fee">$2.99</span></p>
+                <p>Total: <span id="cart-total">$0.00</span></p>
+            </div>
+            <button class="btn btn-primary" id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

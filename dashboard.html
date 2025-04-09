@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - FoodHub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container"> 
+            <div class="header-content">
+                <div class="logo">
+                    <h1>FoodHub</h1>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#" class="nav-link active">Dashboard</a></li>
+                        <li class="nav-item"><a href="restaurant.html" class="nav-link">Restaurants</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Orders</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn btn-logout">Logout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <div class="container">
+            <h2>Welcome to your Dashboard</h2>
+            <div class="dashboard-content">
+                <div class="dashboard-card">
+                    <h3>Recent Orders</h3>
+                    <p>View your order history</p>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Favorite Restaurants</h3>
+                    <p>Your saved favorites</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+      // Check for admin status
+      const urlParams = new URLSearchParams(window.location.search)
+      const isAdmin = urlParams.get('admin') === 'true'
+      
+      if (isAdmin) {
+        // Add admin controls
+        const dashboardContent = document.querySelector('.dashboard-content')
+        const adminControls = document.createElement('div')
+        adminControls.className = 'admin-controls'
+        adminControls.innerHTML = `
+          <div class="dashboard-card admin-card">
+            <h3>Admin Controls</h3>
+            <div class="admin-actions">
+              <button class="btn btn-admin">Manage Restaurants</button>
+              <button class="btn btn-admin">View Reports</button>
+              <button class="btn btn-admin">Manage Users</button>
+            </div>
+          </div>
+        `
+        dashboardContent.prepend(adminControls)
+        
+        // Update welcome message
+        const welcomeHeading = document.querySelector('.dashboard h2')
+        if (welcomeHeading) {
+          welcomeHeading.textContent = 'Welcome Admin'
+        }
+      }
